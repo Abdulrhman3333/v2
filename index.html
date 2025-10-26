@@ -176,13 +176,13 @@
         const form = document.getElementById('myForm');
         form.addEventListener('submit', async e => {
             e.preventDefault();
-            const FIXED_PASSWORD = '1234';
+            // const FIXED_PASSWORD = '1234';
 
-            var password = document.getElementById('password').value;
-            if (password !== FIXED_PASSWORD) {
-                document.getElementById('status').textContent = 'Incorrect password.';
-                return;
-            }
+            // var password = document.getElementById('password').value;
+            // if (password !== FIXED_PASSWORD) {
+            //     document.getElementById('status').textContent = 'Incorrect password.';
+            //     return;
+            // }
 
             const fields = Array.from(form.elements)
                 .filter(el => el.name)
