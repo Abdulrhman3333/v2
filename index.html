@@ -210,15 +210,19 @@
                     method: "POST",
                     body: JSON.stringify(fields)
                 });
-                const text = await res.text();
-                document.getElementById('status').textContent = text;
-                // Clear all input fields **except** username, password, department
                 Array.from(form.elements).forEach(el => {
-                    if (!['userId', 'password', 'department'].includes(el.id) && (el.type === 'text' || el.type === 'number')) {
+                    const keep = ['userId', 'password', 'idara'];
+
+                    if (keep.includes(el.id)) return; // skip these
+
+                    // Reset input fields
+                    if (el.tagName === 'INPUT') {
                         el.value = '';
                     }
-            if (el.tagName === 'SELECT' && !['idara', 'department'].includes(el.id)) {
-                        el.selectedIndex = 0; // reset select dropdown
+
+                    // Reset select dropdowns
+                    if (el.tagName === 'SELECT') {
+                        el.selectedIndex = 0;
                     }
                 });
             } catch (err) {
