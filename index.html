@@ -154,18 +154,25 @@
         <div class="form-grid">
             <div class="form-row"><label>الحفاظ المنتظمون</label><input name="الحفاظ المنتظمون" type="number"></div>
             <div class="form-row"><label>المجازون</label><input name="المجازون" type="number"></div>
-            <div class="form-row"><label>المختبَرون في فروع الأجزاء</label><input name="المختبَرون في فروع الأجزاء" type="number"></div>
-            <div class="form-row"><label>الأجزاء المحفوظة التي تم الاختبار فيها</label><input name="الأجزاء المحفوظة التي تم الاختبار فيها" type="number"></div>
-            <div class="form-row"><label>برامج البراعم ( النورانية + البراعم )</label><input name="برامج البراعم ( النورانية + البراعم )" type="number"></div>
-            <div class="form-row"><label>برامج تحسين التلاوة</label><input name="برامج تحسين التلاوة" type="number"></div>
+            <div class="form-row"><label>المختبَرون في فروع الأجزاء</label><input name="المختبَرون في فروع الأجزاء"
+                    type="number"></div>
+            <div class="form-row"><label>الأجزاء المحفوظة التي تم الاختبار فيها</label><input
+                    name="الأجزاء المحفوظة التي تم الاختبار فيها" type="number"></div>
+            <div class="form-row"><label>برامج البراعم ( النورانية + البراعم )</label><input
+                    name="برامج البراعم ( النورانية + البراعم )" type="number"></div>
+            <div class="form-row"><label>برامج تحسين التلاوة</label><input name="برامج تحسين التلاوة" type="number">
+            </div>
             <div class="form-row"><label>برنامج فضائل</label><input name="برنامج فضائل" type="number"></div>
             <div class="form-row"><label>دورات التجويد</label><input name="دورات التجويد" type="number"></div>
             <div class="form-row"><label>متقن</label><input name="متقن" type="number"></div>
             <div class="form-row"><label>مراجعة كامل المصحف</label><input name="مراجعة كامل المصحف" type="number"></div>
-            <div class="form-row"><label>التلاوات المصححة (اتلوها صح)</label><input name="التلاوات المصححة (اتلوها صح)" type="number"></div>
+            <div class="form-row"><label>التلاوات المصححة (اتلوها صح)</label><input name="التلاوات المصححة (اتلوها صح)"
+                    type="number"></div>
             <div class="form-row"><label>السفراء المؤهلون</label><input name="السفراء المؤهلون" type="number"></div>
-            <div class="form-row"><label>المجتازون لبرنامج التدريب</label><input name="المجتازون لبرنامج التدريب" type="number"></div>
-            <div class="form-row"><label>المجتازون لبرامج رعاية الموهوبين</label><input name="المجتازون لبرامج رعاية الموهوبين" type="number"></div>
+            <div class="form-row"><label>المجتازون لبرنامج التدريب</label><input name="المجتازون لبرنامج التدريب"
+                    type="number"></div>
+            <div class="form-row"><label>المجتازون لبرامج رعاية الموهوبين</label><input
+                    name="المجتازون لبرامج رعاية الموهوبين" type="number"></div>
             <div class="form-row"><label>برنامج الأميات</label><input name="برنامج الأميات" type="number"></div>
             <div class="form-row"><label>برنامج المستويات</label><input name="برنامج المستويات" type="number"></div>
         </div>
@@ -205,7 +212,15 @@
                 });
                 const text = await res.text();
                 document.getElementById('status').textContent = text;
-                // location.reload();
+                // Clear all input fields **except** username, password, department
+                Array.from(form.elements).forEach(el => {
+                    if (!['userId', 'password', 'idara'].includes(el.id) && (el.type === 'text' || el.type === 'number')) {
+                        el.value = '';
+                    }
+                    if (el.tagName === 'SELECT' && !['idara', 'department'].includes(el.id)) {
+                        el.selectedIndex = 0; // reset select dropdown
+                    }
+                });
             } catch (err) {
                 console.error(err);
                 document.getElementById('status').textContent = "❌ حدث خطأ أثناء الإرسال";
@@ -214,4 +229,5 @@
     </script>
 
 </body>
+
 </html>
