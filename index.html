@@ -199,12 +199,13 @@
             document.getElementById('status').textContent = "⏳ جاري الإرسال...";
 
             try {
-                const res = await fetch("https://script.google.com/macros/s/AKfycbzX3gwE2bga2ygkfNR3ce7hnbIjj2GD0GLwIQN1bkF0JezjQeDyaZt9_mmfxUXAy23z9Q/exec", {
+                const res = await fetch("https://script.google.com/macros/s/AKfycbxZ6At944bNqNCKP6oxiupwImBp7OXC6Pwy2ibiPdQZPyl_ZXCFqRcPYI5rcGDOTM2mAQ/exec", {
                     method: "POST",
                     body: JSON.stringify(fields)
                 });
                 const text = await res.text();
                 document.getElementById('status').textContent = text;
+                // location.reload();
             } catch (err) {
                 console.error(err);
                 document.getElementById('status').textContent = "❌ حدث خطأ أثناء الإرسال";
