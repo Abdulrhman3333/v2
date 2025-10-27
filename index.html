@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>نموذج إرسال الأرقام</title>
+    <title>نموذج إرسال البيانات</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
@@ -25,7 +25,7 @@
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            max-width: 750px;
+            max-width: 1000px;
             width: 100%;
         }
 
@@ -102,7 +102,6 @@
     <form id="myForm">
         <h2>نموذج إرسال البيانات</h2>
 
-        <!-- User ID, Password, Department, إدارة -->
         <div class="form-grid">
             <div class="form-row">
                 <label for="userId">رقم المستخدم</label>
@@ -110,62 +109,65 @@
             </div>
             <div class="form-row">
                 <label for="password">كلمة المرور</label>
-                <input id="password" name="كلمة المرور" type="password" value="">
+                <input id="password" name="كلمة المرور" type="password" required>
             </div>
-            <div class="form-row">
-                <label for="department">القسم</label>
-                <select id="department" name="القسم" required>
-                    <option value="">اختر القسم</option>
-                    <option>القسم 1</option>
-                    <option>القسم 2</option>
-                    <option>القسم 3</option>
-                    <option>القسم 4</option>
 
-                </select>
-            </div>
             <div class="form-row">
                 <label for="idara">الإدارة</label>
                 <select id="idara" name="الإدارة" required>
                     <option value="">اختر الإدارة</option>
-                    <option>الإدارة 1</option>
-                    <option>الإدارة 2</option>
-                    <option>الإدارة 3</option>
-                    <option>الإدارة 4</option>
-                    <option>الإدارة 6</option>
-                    <option>الإدارة 7</option>
-                    <option>الإدارة 8</option>
-                    <option>الإدارة 9</option>
-                    <option>الإدارة 10</option>
-                    <option>الإدارة 11</option>
+                    <option>إدارة مكاتب الإشراف قسم الرجال</option>
+                    <option>إدارة البرامج والقياس</option>
+                    <option>إدارة مكاتب الإشراف قسم النساء</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="department">القسم</label>
+                <select id="department" name="القسم" required>
+                    <option value="">اختر القسم</option>
+                    <option>مكتب الشمال - رجال</option>
+                    <option>مكتب الوسط - رجال</option>
+                    <option>مكتب الشرق - رجال</option>
+                    <option>مكتب الجنوب - رجال</option>
+                    <option>قسم التعليم الالكتروني - قسم الرجال</option>
+                    <option>قسم البرامج المركزية رجال</option>
+                    <option>المجمعات الافتراضية</option>
+                    <option>قسم التعليم الموازي</option>
+                    <option>قسم التعليم الالكتروني - قسم النساء</option>
+                    <option>مكتب الجنوب - نساء</option>
+                    <option>مكتب الشرق - نساء</option>
+                    <option>مكتب الشمال - نساء</option>
+                    <option>مكتب الغرب - نساء</option>
+                    <option>البرامج المركزية - نساء</option>
+                    <option>مركز حافظ - نساء</option>
+                    <option>سفراء الذكر - نساء</option>
+                    <option>المبادرات - نساء</option>
+                    <option>إدارة مكاتب الإشراف - نساء</option>
+                    <option>المنتسبون حفاظ - نساء</option>
                 </select>
             </div>
         </div>
 
         <hr style="margin:20px 0; border:0; border-top:1px solid #ccc;">
 
-        <!-- 20 numeric fields -->
         <div class="form-grid">
-            <!-- Repeat pattern for 20 fields -->
-            <div class="form-row"><label for="f1">حقل 1</label><input id="f1" name="حقل 1" type="number"></div>
-            <div class="form-row"><label for="f2">حقل 2</label><input id="f2" name="حقل 2" type="number"></div>
-            <div class="form-row"><label for="f3">حقل 3</label><input id="f3" name="حقل 3" type="number"></div>
-            <div class="form-row"><label for="f4">حقل 4</label><input id="f4" name="حقل 4" type="number"></div>
-            <div class="form-row"><label for="f5">حقل 5</label><input id="f5" name="حقل 5" type="number"></div>
-            <div class="form-row"><label for="f6">حقل 6</label><input id="f6" name="حقل 6" type="number"></div>
-            <div class="form-row"><label for="f7">حقل 7</label><input id="f7" name="حقل 7" type="number"></div>
-            <div class="form-row"><label for="f8">حقل 8</label><input id="f8" name="حقل 8" type="number"></div>
-            <div class="form-row"><label for="f9">حقل 9</label><input id="f9" name="حقل 9" type="number"></div>
-            <div class="form-row"><label for="f10">حقل 10</label><input id="f10" name="حقل 10" type="number"></div>
-            <div class="form-row"><label for="f11">حقل 11</label><input id="f11" name="حقل 11" type="number"></div>
-            <div class="form-row"><label for="f12">حقل 12</label><input id="f12" name="حقل 12" type="number"></div>
-            <div class="form-row"><label for="f13">حقل 13</label><input id="f13" name="حقل 13" type="number"></div>
-            <div class="form-row"><label for="f14">حقل 14</label><input id="f14" name="حقل 14" type="number"></div>
-            <div class="form-row"><label for="f15">حقل 15</label><input id="f15" name="حقل 15" type="number"></div>
-            <div class="form-row"><label for="f16">حقل 16</label><input id="f16" name="حقل 16" type="number"></div>
-            <div class="form-row"><label for="f17">حقل 17</label><input id="f17" name="حقل 17" type="number"></div>
-            <div class="form-row"><label for="f18">حقل 18</label><input id="f18" name="حقل 18" type="number"></div>
-            <div class="form-row"><label for="f19">حقل 19</label><input id="f19" name="حقل 19" type="number"></div>
-            <div class="form-row"><label for="f20">حقل 20</label><input id="f20" name="حقل 20" type="number"></div>
+            <div class="form-row"><label>الحفاظ المنتظمون</label><input name="الحفاظ المنتظمون" type="number"></div>
+            <div class="form-row"><label>المجازون</label><input name="المجازون" type="number"></div>
+            <div class="form-row"><label>المختبَرون في فروع الأجزاء</label><input name="المختبَرون في فروع الأجزاء" type="number"></div>
+            <div class="form-row"><label>الأجزاء المحفوظة التي تم الاختبار فيها</label><input name="الأجزاء المحفوظة التي تم الاختبار فيها" type="number"></div>
+            <div class="form-row"><label>برامج البراعم ( النورانية + البراعم )</label><input name="برامج البراعم ( النورانية + البراعم )" type="number"></div>
+            <div class="form-row"><label>برامج تحسين التلاوة</label><input name="برامج تحسين التلاوة" type="number"></div>
+            <div class="form-row"><label>برنامج فضائل</label><input name="برنامج فضائل" type="number"></div>
+            <div class="form-row"><label>دورات التجويد</label><input name="دورات التجويد" type="number"></div>
+            <div class="form-row"><label>متقن</label><input name="متقن" type="number"></div>
+            <div class="form-row"><label>مراجعة كامل المصحف</label><input name="مراجعة كامل المصحف" type="number"></div>
+            <div class="form-row"><label>التلاوات المصححة (اتلوها صح)</label><input name="التلاوات المصححة (اتلوها صح)" type="number"></div>
+            <div class="form-row"><label>السفراء المؤهلون</label><input name="السفراء المؤهلون" type="number"></div>
+            <div class="form-row"><label>المجتازون لبرنامج التدريب</label><input name="المجتازون لبرنامج التدريب" type="number"></div>
+            <div class="form-row"><label>المجتازون لبرامج رعاية الموهوبين</label><input name="المجتازون لبرامج رعاية الموهوبين" type="number"></div>
+            <div class="form-row"><label>برنامج الأميات</label><input name="برنامج الأميات" type="number"></div>
+            <div class="form-row"><label>برنامج المستويات</label><input name="برنامج المستويات" type="number"></div>
         </div>
 
         <button type="submit">إرسال</button>
@@ -173,16 +175,35 @@
     </form>
 
     <script>
+        // --- حفظ واسترجاع البيانات من الكوكيز ---
+        function setCookie(name, value, days = 365) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${encodeURIComponent(value)};expires=${d.toUTCString()};path=/`;
+        }
+
+        function getCookie(name) {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const [key, val] = cookie.trim().split('=');
+                if (key === name) return decodeURIComponent(val);
+            }
+            return '';
+        }
+
+        // --- تحميل القيم المحفوظة ---
+        window.onload = () => {
+            const userId = getCookie('userId');
+            const password = getCookie('password');
+            const idara = getCookie('idara');
+            if (userId) document.getElementById('userId').value = userId;
+            if (password) document.getElementById('password').value = password;
+            if (idara) document.getElementById('idara').value = idara;
+        };
+
         const form = document.getElementById('myForm');
         form.addEventListener('submit', async e => {
             e.preventDefault();
-            // const FIXED_PASSWORD = '1234';
-
-            // var password = document.getElementById('password').value;
-            // if (password !== FIXED_PASSWORD) {
-            //     document.getElementById('status').textContent = 'Incorrect password.';
-            //     return;
-            // }
 
             const fields = Array.from(form.elements)
                 .filter(el => el.name)
@@ -190,17 +211,22 @@
 
             document.getElementById('status').textContent = "⏳ جاري الإرسال...";
 
+            // حفظ البيانات في الكوكيز
+            setCookie('userId', document.getElementById('userId').value);
+            setCookie('password', document.getElementById('password').value);
+            setCookie('idara', document.getElementById('idara').value);
+
             try {
-                const res = await fetch("https://script.google.com/macros/s/AKfycbxn574KbSrtL3UdTwqCPKXIaKWys0lPVnELw8CJMxWGDrZ1SQyhfeXeKiMrIYCbWFv8Tw/exec", {
+                const res = await fetch("https://script.google.com/macros/s/AKfycbzX3gwE2bga2ygkfNR3ce7hnbIjj2GD0GLwIQN1bkF0JezjQeDyaZt9_mmfxUXAy23z9Q/exec", {
                     method: "POST",
                     body: JSON.stringify(fields)
                 });
-                await res.text();
-                document.getElementById('status').textContent = "✅ تم الإرسال بنجاح!";
+                const text = await res.text();
+                document.getElementById('status').textContent = text;
                 form.reset();
             } catch (err) {
                 console.error(err);
-                document.getElementById('status').textContent = "❌ حدث خطأ أثناء الإرسال.";
+                document.getElementById('status').textContent = text;
             }
         });
     </script>
