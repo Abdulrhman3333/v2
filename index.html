@@ -184,7 +184,7 @@
     <script>
         // --- تحميل القيم المحفوظة من localStorage ---
         window.onload = () => {
-            ['userId', 'password', 'idara'].forEach(id => {
+            ['userId', 'password', 'idara','department'].forEach(id => {
                 const val = localStorage.getItem(id);
                 if (val) document.getElementById(id).value = val;
             });
@@ -195,7 +195,7 @@
             e.preventDefault();
 
             // حفظ القيم في localStorage
-            ['userId', 'password', 'idara'].forEach(id => {
+            ['userId', 'password', 'idara','department'].forEach(id => {
                 localStorage.setItem(id, document.getElementById(id).value);
             });
 
@@ -211,7 +211,7 @@
                     body: JSON.stringify(fields)
                 });
                 Array.from(form.elements).forEach(el => {
-                    const keep = ['userId', 'password', 'idara'];
+                    const keep = ['userId', 'password', 'idara','department'];
 
                     if (keep.includes(el.id)) return; // skip these
 
