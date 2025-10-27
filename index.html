@@ -225,9 +225,11 @@
                         el.selectedIndex = 0;
                     }
                 });
+                const text = await res.text();
+                document.getElementById('status').textContent = text;
             } catch (err) {
                 console.error(err);
-                document.getElementById('status').textContent = "❌ حدث خطأ أثناء الإرسال";
+                document.getElementById('status').textContent = text;
             }
         });
     </script>
