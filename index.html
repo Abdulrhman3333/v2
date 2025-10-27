@@ -217,7 +217,7 @@
                     if (!['userId', 'password', 'idara'].includes(el.id) && (el.type === 'text' || el.type === 'number')) {
                         el.value = '';
                     }
-                    if (el.tagName === 'SELECT' && !['department'].includes(el.id)) {
+            if (el.tagName === 'SELECT' && !['idara', 'department'].includes(el.id)) {
                         el.selectedIndex = 0; // reset select dropdown
                     }
                 });
