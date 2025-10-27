@@ -205,7 +205,6 @@
                 });
                 const text = await res.text();
                 document.getElementById('status').textContent = text;
-                form.reset();
             } catch (err) {
                 console.error(err);
                 document.getElementById('status').textContent = "❌ حدث خطأ أثناء الإرسال";
